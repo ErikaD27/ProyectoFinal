@@ -1,18 +1,29 @@
-
-
 body {
-  max-width:767px;
-  background-color: red;
-  /* min-width:320px;
-  height: 100vh;
-
+  width: 100%;
+  
+  height: 100%;
+  
 
   flex-direction: column;
   display: grid;
   grid-template-areas:
     "encabezado"
     "article"
-    "container"
     "footer";
-  gap: 10px; */
+  gap: 10px;
+ 
+  background-color: rgb(204, 200, 200) ;
+ 
+}
+
+.article {
+  display: grid;
+  gap: 10px;
+  grid-auto-rows: 380px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
+}
+
+iframe{
+  width: 300px;
+  height: 200px;
 }
