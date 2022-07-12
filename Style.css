@@ -6,7 +6,7 @@
 
 body {
   width: 100%;
-  
+  min-width: 330px;;
   height: 100%;
   
 
@@ -15,7 +15,6 @@ body {
   grid-template-areas:
     "encabezado"
     "article"
-    "container"
     "footer";
   gap: 10px;
  
@@ -326,35 +325,40 @@ h4{
 /* Ajuste posicionamiento de los videos con respecto al contenedor */
 
 .article {
-  margin-top:30px;
-  margin-bottom:50px;
-  padding-left: 8%;
-  padding-right: 10px;
   
-  grid-area: article;
+  width: 100%;
+  height: auto;
+  grid-auto-flow: dense;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  transition:0.8s ease;
-  height: 720px;
+  grid-row: auto;
+  grid-template-columns: repeat(auto-fill, minmax(25rem,1fr));
   gap:20px;
-  align-content: space-around;
-  width: 80%;
+  /* display: grid;
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fil,minmax(15rem,1fr)); */
+  margin-left: 20px;
+    
   
+ 
+
   
 }
 
 .art-item{
   
-  margin-left: 10px;
-  margin-right: 10px;
+ 
+  margin-left: 5px;
+  margin-right: 5px;
 
-}
+} 
 
 iframe{
-  width: 380px;
-  height: 200px;
+  width: 100%;
+  min-width: 200px;
+  height: 250px;
 }
+
 
 /* Auste títulos de pie de video */
  .artitem h3{
@@ -415,7 +419,7 @@ h3{
   margin-top: 10px;
   grid-area: footer;
   height: 100%;
-  background-color: #d02424;
+  background-color: #a89797;
   
   display: flex;
   justify-content: center;
