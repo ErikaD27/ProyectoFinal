@@ -22,7 +22,7 @@ body {
  
 }
 
-/* Encabezado */
+Encabezado
 
 .Encabezado{
   width: 100%;
@@ -323,33 +323,108 @@ h4{
 
 
 /* Inicia ajuste videos */
+/* .article {
+  
+  width: 90%;
+  height: auto;
+  
+  display: grid;
+  grid-row: auto;
+  grid-template-columns: repeat(auto-fill, minmax(30rem,1fr));
+  
+  /* display: grid;
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fil,minmax(15rem,1fr)); 
+  margin-left: 6%;
+
+  
+} */
+
+
+
+
+@media (min-width: 320px)and (max-width:767px){
+  body{
+    width: 100%;
+    height: auto;
+  }
+  .article {
+    
+    width: 90%;
+    height: auto;
+    
+    display: grid;
+    grid-row: auto;
+    
+    grid-template-columns: repeat(auto-fill, minmax(300px,760px));
+    gap:50px;
+    margin-left: 6%;
+    
+   
+    
+  }
+  .art-item{
+    margin-top:40px;
+    margin-left: 5px;
+    margin-right: 5px;
+   
+  
+  } 
+  
+  iframe{
+    width: 90%;
+    
+    height: 100%;
+  
+  }
+
+  .search{
+    display: flex;
+    
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left:100px;
+    
+  
+  }
+  #search{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start ;
+    width: 100px;
+    height: 40px;
+   
+  }
+}
+
+
 
 
 
 
 /* Ajuste posicionamiento de los videos con respecto al contenedor */
-@media screen and (min-width:767px){
-  .article {
-  
-    width: 90%;
-    height: auto;
-    grid-auto-flow: dense;
-    display: grid;
-    grid-row: auto;
-    grid-template-columns: repeat(auto-fill, minmax(25rem,1fr));
-    gap:20px;
-    /* display: grid;
-    gap: 1rem;
-    grid-auto-rows: 22rem;
-    grid-template-columns: repeat(auto-fil,minmax(15rem,1fr)); */
-    margin-left: 20px;
+@media  (min-width:768px){
 
-    
+
+  body{
+    width: 100%;
+    height: auto;
+  }
+
+  .article{
+    width: 90%;
+  height: auto;
+  
+  display: grid;
+  grid-row: auto;
+  grid-template-columns: repeat(auto-fill, minmax(30rem,1fr));
+    margin-left: 6%;
+    gap:30px;
   }
 
   .art-item{
       
-    
     margin-left: 5px;
     margin-right: 5px;
   
@@ -358,43 +433,11 @@ h4{
   iframe{
     width: 100%;
     min-width: 200px;
-    height: 250px;
+    height: 300px;
   }
 }
   
-  @media screen and (max-width:767px){
-    .article {
-    
-      width: 90%;
-      height: auto;
-      grid-auto-flow: dense;
-      display: grid;
-      grid-row: auto;
-      grid-template-columns: repeat(auto-fill, minmax(40rem,1fr));
-      gap:30px;
-      /* display: grid;
-      gap: 1rem;
-      grid-auto-rows: 22rem;
-      grid-template-columns: repeat(auto-fil,minmax(15rem,1fr)); */
-      margin-left: 7%;
-  
-      
-    }
-    .art-item{
-  
-      margin-left: 5px;
-      margin-right: 5px;
-    
-    } 
-    
-    iframe{
-      width: 90%;
-      
-      height: 100%;
-      height: clamp(200px,300px);
-    }
-}
-
+ 
 
 
 /* Auste títulos de pie de video */
