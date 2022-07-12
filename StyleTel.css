@@ -1,4 +1,4 @@
-@media screen and (max-width: 320px){
+@media screen and (max-width: 767px){
   .encabezado{
       width: 20%;
   }
@@ -14,22 +14,123 @@
 
 body {
   width: 100%;
-  max-width: 320px;
+  max-width: 767px;
+  min-width: 320px;
   height: 100%;
   
 
   flex-direction: column;
   display: grid;
-  grid-auto-flow: dense;
+  
   grid-template-areas:
     "encabezado"
     "article"
     "footer";
-  gap: 8px;
+  gap: 5px;
  
   background-color: rgb(204, 200, 200) ;
  
 }
+
+.Encabezado{
+  max-width: 767px;
+  min-width: 320px;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 20px;
+  
+  
+}
+.logo{
+  max-width: 50px;
+  display:inline;
+}
+
+.Contenedor{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* max-width: 1200px; */
+
+}
+
+/* Ajuste de posicionamiento logo y del menú encabzado */
+.Contenedor .btn-menu, .logo{
+  float: left;
+  line-height:10px;
+  
+}
+
+
+/* Ajuste del menú del encabezado */
+
+/* Ajuste posicionamieno del menú del encabezado */
+.Contenedor .menu{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  line-height: 2px;
+  text-align: center;
+  max-width: 767px;
+  min-width: 320px;
+  width: 90%;
+  margin-top: 2px;
+  
+}
+
+/* Texto del menú de encabezado */
+.Contenedor .menu a{
+  display: inline-block;
+  line-height: normal;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s ease;
+  border: 1px solid gray;
+  padding: 3px;
+  border-radius: 20px;
+  margin-right: 2px;
+  margin-left: 1px;
+  margin-top: 2px;
+  font-size: 0.8rem;
+  
+}
+
+/*´Posición barra de busqueda  */
+/* .SearchMenu{
+ 
+  margin-top: 5px;
+  
+  
+} */
+.ContenedorLupa{
+  border-width: 1px;
+  padding: 2px;
+  font-size: 12px;
+
+}
+
+.search{
+  
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left:20px;
+  margin-top: -10px;
+
+}
+
+
+#search{
+  width: 140px;
+  height: 20px;
+ 
+}
+
+
+
 
 .article {
   width: 100%;
