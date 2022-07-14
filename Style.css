@@ -854,7 +854,7 @@ small{
   }
   
   .container{
-    width: clamp(28%,17vw,30%);
+    width: clamp(6%,14vw,13%);
   }
 
   .sidebar{
