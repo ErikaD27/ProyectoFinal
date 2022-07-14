@@ -25,8 +25,6 @@ body {
 }
 
 
-
-
 .Contenedor{
   width: 100%;
   margin: 0;
@@ -39,12 +37,15 @@ body {
 
 
 /* Ajuste del menú del encabezado */
-
+.menu{
+  width: 100%;
+}
 /* Ajuste posicionamieno del menú del encabezado */
 .Contenedor .menu{
   display: flex;
-  justify-content: space-around;
+  gap:4.5%;
   align-items: center;
+  justify-content: center;
   flex-flow: row wrap;
   line-height: 10px;
   text-align: center;
@@ -167,10 +168,12 @@ body {
 
   opacity: 0.5;
   visibility: hidden;
-  width: 280px;
+  width:clamp(12%,7vw,15%);
  
 }
-
+.sidebar{
+  width: 100%;
+}
 #btn-menu:checked ~ .container{
   opacity: 10;
   visibility: visible;
@@ -180,7 +183,6 @@ body {
 /* fondo del sidebar y dimensiones */
 .sidebar{
  
-  width: 250px;
   height: 100%;
   background-color: gray;
   
@@ -281,7 +283,13 @@ h4{
 
 /* Finaliza ajuste sidebar */
 
-/* Iniciop ajustes generales Videos */
+/* Inicio ajustes generales Videos */
+.article{
+  width: 90%;
+  margin-left: clamp(3%,7vw,5%);
+}
+
+
 
 /* Ajuste imagenes sidebar de suscripciones */
 .ImgSB{
@@ -294,7 +302,7 @@ h4{
 /* Auste títulos de pie de video */
 .artitem h3{
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
  
 }
@@ -314,16 +322,17 @@ h4{
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: clamp(10px,7vw,15px);
 
 }
 
 /* Ajuste de los títulos de los videos */
 h3{
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
+  font-size: clamp(8px,8vw,25px);
   white-space: normal;
-  font-weight: 500;
-  max-height: 4.4rem;
+  font-weight: 100;
+  /* max-height: 4.4rem; */
   text-overflow: ellipsis;
   text-align: start;
   font-family: "Roboto","Arial",sans-serif;
@@ -345,7 +354,7 @@ h3{
 
  .footer {
   height: 100px;
-  margin-top: 10px;
+  margin-top: 2%;
   grid-area: footer;
   height: 100%;
   background-color: #a89797;
@@ -353,9 +362,12 @@ h3{
   display: flex;
   justify-content: center;
   align-items: center;
-   
   
 }  
+
+small{
+  font-size: clamp(10px,18vw,25px);
+}
 
 
 /* Finaliza ajuste sidebar */
@@ -369,7 +381,6 @@ h3{
   }
   
  
-
   /* Configuración del encabezado */
   .Encabezado{
     margin-top:3%;
@@ -499,112 +510,19 @@ h3{
     font-size: clamp(12px, 4vw, 20px);
   }
 
-  /* Ajuste de posición del contenedor */
-  .container{
-    /* position:fixed; */
   
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-
-    opacity: 0.5;
-    visibility: hidden;
-    width: 280px;
-  
-  }
-
-  /* Aparecer menú lateral con el click  en el ícono*/
-  .btn-menu{
-    font-size: clamp(20px,4vw,30px);
-  }
-
-  #btn-menu:checked ~ .container{
-    opacity: 10;
-    visibility: visible;
-
-  }
-
-  /* fondo del sidebar y dimensiones */
-  .sidebar{
-  
-    width: 150px;
-    height: 100%;
-    background-color: gray;
-    
-    overflow: auto;
-    float: left;
-  }
-
-
-  /* Ajuste del ícono X para cerrar el sidebar */
-
-  .side-hide{
-    float:right;
-    margin: 10px;
-    color: white;
-    opacity: .7;
-    font-size: 15px;
-    cursor: pointer;
-  } 
-  /* Ajuste del padging opciones sidebar */
-  .sidebar ul li{
-    padding: 6px 10px;
-  }
-  /* Ajuste hover sidebar */
-  .sidebar ul li:hover{
-    background: #4e4e4e;
-    cursor: pointer;
-
-  }
   /* Ajuste letra sidebar */
   .sidebar ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: clamp(8px,4vw,12px);
-    font-family: sans-serif;
-    text-shadow: 1px 1px 3px black;
-    display: flex;
-    align-items: center;
-
-  }
-  /* Se ajusta el margen superior del inicio de la opciones */
-  ul{
-    margin-top: 25px;
-  }
-
-  /* Ajuste de la selección en el sidebar */
-
-  button{
-    background-color: black;
-    color: white;
-    padding: 15px 12px;
-    border:none;
-    display: block;
     
-    cursor:pointer;
-    margin-top: 5%;
-    margin-left: 5%;
+    font-size: clamp(8px,4vw,15px);
+  
   }
-
-  /* Recuadro parte 2 del sidebar */
-  .Part2{
-    padding-top: 15px ;
-    padding-bottom: 20px;
-    border-width: 1px;
-    border-style: solid;
-    border-top-color: rgb(213, 209, 209) ;
-    border-bottom-color: rgb(213, 209, 209) ;
-    
-  }
+  
+  
   /* Títulos principales sidebar */
   h4{
-    margin-left:10px;
-    padding-bottom: 10px ;
-
-    font-size: 11px;
-    color:white;
-    font-family: sans-serif;
-    text-shadow: 1px 1px 3px black;
+   
+    font-size: clamp(10px,7vw,13px);
   }
 
   /* Configuración ícono sidebar */
@@ -622,18 +540,10 @@ h3{
  
 /* Ajuste Videos */
   .article {
-    
-    width: 90%;
-    margin-left:7%;
     height: auto;
     display: flex;
     flex-direction: column;
-    
-    
-    
-    
-    /* margin-left: 8%; */
-    gap:10px;
+    gap:clamp(10px,4vw,15px);
     
   }
 
@@ -715,22 +625,22 @@ h3{
     flex-wrap: wrap;
     
   }
-  
+  /* Ajuste del alto de la barra de busqueda */
   .search{
     display: flex;
     width: 100%;
-    
     height: clamp(25px, 5vw, 45px);
   
   }
-  
+  /* Ajuste tamaño y letra de la barra de busqueda */
   #search{
     width:90%;
+    font-size: clamp(15px,18vw,27px);
     
   }
 
   #Lupa{
-    font-size: clamp(20px, 7vw, 28px); 
+    font-size: clamp(20px, 17vw, 28px); 
   }
 
   .ContenedorLupa{  
@@ -739,7 +649,7 @@ h3{
   /* Auste ícono del micrófono */
 
   .microfono{
-    font-size:clamp(25px, 5vw, 45px);
+    font-size:clamp(25px, 5vw, 40px);
   }
 
   */
@@ -754,147 +664,101 @@ h3{
   }
 
   #bell {
-    font-size:32px;
-    margin-right: 12px;
+    font-size:clamp(25px, 5vw, 40px);
+    margin-right: clamp(12px, 5vw, 15px);
   } 
 
   #camara {
-    font-size:32px;
-    margin-right: 12px;
+    font-size:clamp(25px, 5vw, 40px);
+    margin-right: clamp(12px, 5vw, 15px);
   }
   
   #cuadros {
-    font-size:32px;
-    margin-right: 12px;
+    font-size:clamp(25px, 5vw, 40px);
+    margin-right: clamp(12px, 5vw, 15px);
 
   }
 
   .ImgEnc{
-    width: 32px;
-    height: 32px;
+    width: clamp(30px,18vw,45px);
+    height: clamp(30px,18vw,45px);
+    margin-top: 2
+    
+    2px;
     
    
   }
-
+  /* Ajuste menú de opciones del encabezado */
   .menu{
     gap:4px;
     margin-bottom: 5%;
   }
   .Contenedor .menu a{
-    font-size: clamp(12px, 4vw, 20px);
+    margin-top: 1%;
+    gap: clamp(3%,14vw,3.5%);
+    font-size: clamp(15px, 14vw, 25px);
   }
 
-  /* Ajuste de posición del contenedor */
-  .container{
-    /* position:fixed; */
-  
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-
-    opacity: 0.5;
-    visibility: hidden;
-    width: 280px;
-  
-  }
+ 
 
   /* Aparecer menú lateral con el click  en el ícono*/
   .btn-menu{
     font-size: clamp(20px,4vw,30px);
   }
 
-  #btn-menu:checked ~ .container{
-    opacity: 10;
-    visibility: visible;
-
+  .container{
+    width: clamp(28%,17vw,30%);
   }
 
-  /* fondo del sidebar y dimensiones */
   .sidebar{
-  
-    width: 150px;
-    height: 100%;
-    background-color: gray;
-    
-    overflow: auto;
-    float: left;
+    width:90% ;
   }
 
 
-  /* Ajuste del ícono X para cerrar el sidebar */
-
-  .side-hide{
-    font-size: 15px;
-   
-  } 
-  /* Ajuste del padging opciones sidebar */
-  .sidebar ul li{
-    padding: 6px 10px;
-  }
  
   /* Ajuste letra sidebar */
   .sidebar ul li a{
-    font-size: clamp(8px,4vw,12px);
+    font-size: clamp(8px,4vw,18px);
   }
-  /* Se ajusta el margen superior del inicio de la opciones */
-  ul{
-    margin-top: 25px;
-  }
+ 
 
-  /* Ajuste de la selección en el sidebar */
-
-  button{
-    padding: 15px 12px;
-  }
-
-  /* Recuadro parte 2 del sidebar */
-  .Part2{
-    padding-top: 15px ;
-    padding-bottom: 20px;
-    border-width: 1px;
-    
-  }
   /* Títulos principales sidebar */
   h4{
     margin-left:10px;
     padding-bottom: 10px ;
-    font-size: 11px;
+    font-size: clamp(15px,7vw,20px);
    
   }
 
-  /* Configuración ícono sidebar */
-
-  #IconoSB{
-    padding-right: 12px;
-  }
   
-
-
- 
 /* Ajuste Videos */
   .article {
     
-    width: 90%;
-    margin-left:9%;
     height: auto;
-    
+    margin-left: clamp(3%,17vw,9%);
     display: grid;
-    grid-row: auto;
-    
-    grid-template-columns: repeat(auto-fill, minmax(200px,450px));
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    grid-template-rows:auto;
     /* margin-left: 8%; */
-    gap:10px;
-    
+    gap:clamp(8px,17vw,55px);
+
   }
 
+  .PieVideo{
+    margin-bottom: clamp(30px,17vw,60px);
+  }
   .artitem{
+    margin-top: clamp(3px,100%,10px);
+    
     width: 100%;
     width:clamp(220px,100%,300px);
   }
 
   iframe{
     width: 90%;
-    
+    height: clamp(85%,17vw,90%);
+   
   }
 
 }
@@ -980,8 +844,6 @@ h3{
    
   }
   
-
-  
   /* Aparecer menú lateral con el click  en el ícono*/
   .barras{
     font-size: clamp(25px, 7vw, 38px); 
@@ -991,25 +853,35 @@ h3{
     font-size:clamp(25px, 7vw, 32px); 
   }
   
-  
+  .container{
+    width: clamp(28%,17vw,30%);
+  }
 
+  .sidebar{
+    width:90% ;
+  }
+
+  .sidebar ul li a {
+    font-size: clamp(17px,17vw,22px);
+  }
+/* Subtítulos sidebar */
+  h4{
+    font-size: clamp(22px,17vw,24px)
+  }
+  
   .article{
     margin-top: 2%;
     width: 90%;
     height: auto;
-  
     display: grid;
     grid-row: auto;
-    grid-template-columns: repeat(auto-fill, minmax(25rem,1fr));
-    margin-left: 6%;
-    gap:30px;
+    grid-template-columns: repeat(auto-fill, minmax(30rem,1fr));
+    justify-content: center;
+    gap:clamp(30px,7vw,40px);
   }
 
   .art-item{
-    max-width: 500px;
-    min-width: 300px;
-    margin-left: 5px;
-    margin-right: 5px;
+    justify-content: center;
   
   } 
   
@@ -1019,78 +891,35 @@ h3{
     min-height: 250px;
     max-height: 300px;
   }
-  .art-item{
-    max-height: 300px;
-    min-height: 200px;
-  }
-
+ 
 /* Auste títulos de pie de video */
  .artitem h3{
   display: flex;
   align-items: flex-start;
   justify-content: center;
  
-}
+  }
 /* Ajuste imágenes de creadores de contenido */
 
-.ImgVid{
-  width: 40px;
-  border-radius: 20px;
- 
-}
-
-.PieVideo{
-  margin-top: 10px;
-  margin-bottom: 30px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-
-}
-
-/* Ajuste de los títulos de los videos */
-h3{
-  font-size: 1.2rem;
-  white-space: normal;
-  font-weight: 500;
-  max-height: 4.4rem;
-  text-overflow: ellipsis;
-  text-align: start;
-  font-family: "Roboto","Arial",sans-serif;
-  text-shadow: 2px 2px 2px rgb(244, 226, 226);
-  
-
-}
-/*Ajuste del span */
-.PieVideo Span {
-  font-size: 1rem;
-  color: gray;
-  font-weight: 500;
-  font-family: "Roboto","Arial",sans-serif;
-  text-shadow: 1px 1px 2px white;
- 
-  
- 
-  
-}
- /* Finaliza ajuste videos  */
-
- .footer {
-  height: 100px;
-  margin-top: 10px;
-  grid-area: footer;
-  height: 100%;
-  background-color: #a89797;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-   
-  
-  
+  .ImgVid{
+    width: clamp(28px,7vw,45px);
+    border-radius: 20px;
   
   }
+
+ 
+
+  /* Ajuste de los títulos de los videos */
+  h3{
+    font-size: clamp(15px,7vw,25px);
+  
+  }
+  /*Ajuste  tamaño de letra span */
+  .PieVideo Span {
+    font-size: clamp(18px,18vw,22px);
+ 
+  }
+  /* Finaliza ajuste videos  */
+
+  
 }
