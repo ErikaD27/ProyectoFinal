@@ -24,15 +24,7 @@ body {
  
 }
 
- /* .Encabezado{
-    width: 100%;
-    height: 60%;
-    display: flex;
-    align-items: center;
-    margin-left: clamp(20px,100%,50px);
-    flex-wrap: wrap;
-  
-  } */
+
 
 
 .Contenedor{
@@ -45,12 +37,6 @@ body {
 
 }
 
-/* Ajuste de posicionamiento logo y del menú encabzado */
-/* .Contenedor .btn-menu, .logo{
-  float: left;
-  line-height:100px;
-  
-} */
 
 /* Ajuste del menú del encabezado */
 
@@ -80,39 +66,6 @@ body {
   font-size: 1rem;
   font-family: "Roboto","Arial",sans-serif;
 }
-/* .logo{
-  max-width: 150px;
-  display:inline
-} */
-
-/*´Posición barra de busqueda  */
-/* .SearchMenu{
-  width: 90%;
-  margin-top: 15px;
-  display:flex ;
-  justify-content: center;
-  flex-direction: row;
-  
-
-} */
-/* .search{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  
-
-  
- 
-}
-#search{
-  display: flex;
-  justify-content: center;
-  width: 500px;
-  max-height: 50px;
-  min-height: 40px;
- 
-} */
 
 
 /* Contenedor de la  lupa */
@@ -182,7 +135,18 @@ body {
   border-radius: 100%;
   
 }
+.menu{
+  width: 80%;
+}
+/* aplicación del hover y ajuste del border de los botones del menú del encabezado */
+.Contenedor .menu a:hover{
+  border-bottom: 4px solid #c7c7c7;
+  padding-bottom: 15px;
+}
 
+/* Cierre encabezado */
+
+/* Inicio barra de opciones lateral */
 /* aplicación del hover y ajuste del border de los botones del menú del encabezado */
 .Contenedor .menu a:hover{
   border-bottom: 4px solid #c7c7c7;
@@ -193,7 +157,131 @@ body {
 
 /* Inicio barra de opciones lateral */
 
+/* Ajuste de posición del contenedor */
+.container{
+  /* position:fixed; */
+ 
+  position: fixed;
+  height: 100%;
+  overflow: auto;
 
+  opacity: 0.5;
+  visibility: hidden;
+  width: 280px;
+ 
+}
+
+#btn-menu:checked ~ .container{
+  opacity: 10;
+  visibility: visible;
+
+}
+
+/* fondo del sidebar y dimensiones */
+.sidebar{
+ 
+  width: 250px;
+  height: 100%;
+  background-color: gray;
+  
+  overflow: auto;
+  float: left;
+}
+
+
+/* Ajuste del ícono X para cerrar el sidebar */
+
+.side-hide{
+  float:right;
+  margin: 12px;
+  color: white;
+  opacity: .7;
+  font-size: 24px;
+  cursor: pointer;
+} 
+/* Ajuste del padging opciones sidebar */
+.sidebar ul li{
+  padding: 12px 22px;
+}
+/* Ajuste hover sidebar */
+.sidebar ul li:hover{
+  background: #4e4e4e;
+  cursor: pointer;
+
+}
+/* Ajuste letra sidebar */
+.sidebar ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  font-family: sans-serif;
+  text-shadow: 1px 1px 3px black;
+  display: flex;
+  align-items: center;
+
+}
+/* Se ajusta el margen superior del inicio de la opciones */
+ul{
+  margin-top: 30px;
+}
+
+/* Ajuste de la selección en el sidebar */
+
+button{
+  background-color: black;
+  color: white;
+  padding: 15px 12px;
+  border:none;
+  display: block;
+  
+  cursor:pointer;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+/* Recuadro parte 2 del sidebar */
+.Part2{
+  padding-top: 20px ;
+  padding-bottom: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: rgb(213, 209, 209) ;
+  border-bottom-color: rgb(213, 209, 209) ;
+  
+}
+/* Títulos principales sidebar */
+h4{
+  margin-left:10px;
+  padding-bottom: 10px ;
+
+  font-size: 15px;
+  color:white;
+  font-family: sans-serif;
+  text-shadow: 1px 1px 3px black;
+}
+
+/* Configuración ícono sidebar */
+
+#IconoSB{
+  padding-right: 12px;
+}
+/* no mostrar sidebar si no se le da click al ícono  */
+#btn-menu{
+  display: none;
+ 
+}
+
+/* Ajuste imagenes sidebar de suscripciones */
+.ImgSB{
+  border-radius: 100%;
+  padding-right: 12px;
+  width: 40px;
+  
+}
+
+/* Finaliza ajuste sidebar */
+
+/* Iniciop ajustes generales Videos */
 
 /* Ajuste imagenes sidebar de suscripciones */
 .ImgSB{
@@ -250,9 +338,7 @@ h3{
   font-weight: 500;
   font-family: "Roboto","Arial",sans-serif;
   text-shadow: 1px 1px 2px white;
- 
-  
- 
+
   
 }
  /* Finaliza ajuste videos  */
@@ -570,7 +656,6 @@ h3{
   
   }
   
- 
 
   /* Configuración del encabezado */
   .Encabezado{
@@ -645,7 +730,7 @@ h3{
   }
 
   #Lupa{
-    font-size: clamp(20px, 100%, 28px); 
+    font-size: clamp(20px, 7vw, 28px); 
   }
 
   .ContenedorLupa{  
@@ -739,33 +824,17 @@ h3{
   /* Ajuste del ícono X para cerrar el sidebar */
 
   .side-hide{
-    float:right;
-    margin: 10px;
-    color: white;
-    opacity: .7;
     font-size: 15px;
-    cursor: pointer;
+   
   } 
   /* Ajuste del padging opciones sidebar */
   .sidebar ul li{
     padding: 6px 10px;
   }
-  /* Ajuste hover sidebar */
-  .sidebar ul li:hover{
-    background: #4e4e4e;
-    cursor: pointer;
-
-  }
+ 
   /* Ajuste letra sidebar */
   .sidebar ul li a{
-    text-decoration: none;
-    color: white;
     font-size: clamp(8px,4vw,12px);
-    font-family: sans-serif;
-    text-shadow: 1px 1px 3px black;
-    display: flex;
-    align-items: center;
-
   }
   /* Se ajusta el margen superior del inicio de la opciones */
   ul{
@@ -775,15 +844,7 @@ h3{
   /* Ajuste de la selección en el sidebar */
 
   button{
-    background-color: black;
-    color: white;
     padding: 15px 12px;
-    border:none;
-    display: block;
-    
-    cursor:pointer;
-    margin-top: 5%;
-    margin-left: 5%;
   }
 
   /* Recuadro parte 2 del sidebar */
@@ -791,20 +852,14 @@ h3{
     padding-top: 15px ;
     padding-bottom: 20px;
     border-width: 1px;
-    border-style: solid;
-    border-top-color: rgb(213, 209, 209) ;
-    border-bottom-color: rgb(213, 209, 209) ;
     
   }
   /* Títulos principales sidebar */
   h4{
     margin-left:10px;
     padding-bottom: 10px ;
-
     font-size: 11px;
-    color:white;
-    font-family: sans-serif;
-    text-shadow: 1px 1px 3px black;
+   
   }
 
   /* Configuración ícono sidebar */
@@ -812,11 +867,7 @@ h3{
   #IconoSB{
     padding-right: 12px;
   }
-  /* no mostrar sidebar si no se le da click al ícono  */
-  #btn-menu{
-    display: none;
   
-  }
 
 
  
@@ -830,7 +881,7 @@ h3{
     display: grid;
     grid-row: auto;
     
-    grid-template-columns: repeat(auto-fill, minmax(200px,320px));
+    grid-template-columns: repeat(auto-fill, minmax(200px,450px));
     /* margin-left: 8%; */
     gap:10px;
     
@@ -848,264 +899,102 @@ h3{
 
 }
 
-/* .article {
-    
-  width: 90%;
-  height: auto;
-  
-  display: grid;
-  grid-row: auto;
-  
-  grid-template-columns: repeat(auto-fill, minmax(300px,320px));
-  /* margin-left: 8%; 
-  gap:10px;
-  
-}
 
-
-/*.article {
-    
-  width: 90%;
-  height: auto;
-  
-  display: grid;
-  grid-row: auto;
-  
-  grid-template-columns: repeat(auto-fill, minmax(300px,320px));
-  /* margin-left: 8%; 
-  gap:10px;
-} */
-
-
-
-
-
-/* Ajuste posicionamiento de los videos con respecto al contenedor */
-/*  Para un body mayor de 768p-*/
+/*  Para un body mayor de 1200px*/
 @media  (min-width:1200px){
+  .Encabezado{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .Contenedor{
+    margin-top: 2%;
+    margin-left: 1.5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+  }
 
+  .SearchMenu{
+    max-width: 90%;
+    min-width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 
-
+  /* Ajuste de tamaño variable del buscador  */
+  .search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: clamp(25px, 5vw, 45px);
+    padding-left: 2%;
+  }
   
- 
+  /* Ajuste variable del ancho del buscador */
+  
+  #search{
+    width:60%;
+    font-size: clamp(20px,7vw,30px);
+    
+  }
  
   /* Texto del menú de encabezado */
   .Contenedor .menu a{
-    
-    padding: 8px;
-    border-radius: 20px;
-    
-    font-size: clamp(12px,4vw,25px)
+    padding: clamp(5px,4vw,10px);
+    font-size: clamp(12px,4vw,25px);
+  }
 
-  }
-  .logo{
-    max-width: 150px;
-    display:inline
-  }
-  
-  /*´Posición barra de busqueda  */
-  .SearchMenu{
-    width: 90%;
-    margin-top: 15px;
-    display:flex ;
-    justify-content: center;
-    flex-direction: row;
-    
-  
-  }
-  .search{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    
-  
-    
-   
-  }
-  #search{
-    display: flex;
-    justify-content: center;
-    width: 500px;
-    max-height: 50px;
-    min-height: 40px;
+  /* Ajuste tamaño variable del logo */
+  .Logo{
+    width:clamp(120px,7vw,180px);
    
   }
   
-  
+ 
   /* Contenedor de la  lupa */
-  .ContenedorLupa{
-    border-width: 1px;
-    padding: 5px;
-    border-style: solid;
-    border-color: black;
-    cursor: pointer;
-    animation: expandir 2s 1s alternate ease both ;
-    font-size: 22px;
-  
+  #Lupa{
+    font-size: clamp(25px, 7vw, 30px); 
   }
-  
+
+  .ContenedorLupa{  
+    padding: 2px;
+  }
  
-  
- 
-  
+
   /* Configuración de íconos de la parte superior derecha del encabezado */
   .EncIconos{
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    width: 100%;
+    max-width: 60%;
+    min-width: 40%;
     gap:40px;
     margin-right: clamp(2%,100%,4%);
    
   }
   
 
-  /* aplicación del hover y ajuste del border de los botones del menú del encabezado */
-  .Contenedor .menu a:hover{
-    border-bottom: 4px solid #c7c7c7;
-    padding-bottom: 15px;
-  }
-  
-  /* Cierre encabezado */
-  
-  /* Inicio barra de opciones lateral */
-  
-  /* Ajuste de posición del contenedor */
-  .container{
-    /* position:fixed; */
-   
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-  
-    opacity: 0.5;
-    visibility: hidden;
-    width: 280px;
-   
-  }
   
   /* Aparecer menú lateral con el click  en el ícono*/
-  .btn-menu{
-    font-size: 35px;
+  .barras{
+    font-size: clamp(25px, 7vw, 38px); 
   }
   
-  #btn-menu:checked ~ .container{
-    opacity: 10;
-    visibility: visible;
-  
+  .microfono{
+    font-size:clamp(25px, 7vw, 32px); 
   }
-  
-  /* fondo del sidebar y dimensiones */
-  .sidebar{
-   
-    width: 250px;
-    height: 100%;
-    background-color: gray;
-    
-    overflow: auto;
-    float: left;
-  }
-  
-  
-  /* Ajuste del ícono X para cerrar el sidebar */
-  
-  .side-hide{
-    float:right;
-    margin: 12px;
-    color: white;
-    opacity: .7;
-    font-size: 24px;
-    cursor: pointer;
-  } 
-  /* Ajuste del padging opciones sidebar */
-  .sidebar ul li{
-    padding: 12px 22px;
-  }
-  /* Ajuste hover sidebar */
-  .sidebar ul li:hover{
-    background: #4e4e4e;
-    cursor: pointer;
-  
-  }
-  /* Ajuste letra sidebar */
-  .sidebar ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 17px;
-    font-family: sans-serif;
-    text-shadow: 1px 1px 3px black;
-    display: flex;
-    align-items: center;
-  
-  }
-  /* Se ajusta el margen superior del inicio de la opciones */
-  ul{
-    margin-top: 30px;
-  }
-  
-  /* Ajuste de la selección en el sidebar */
-  
-  button{
-    background-color: black;
-    color: white;
-    padding: 15px 12px;
-    border:none;
-    display: block;
-    
-    cursor:pointer;
-    margin-top: 20px;
-    margin-left: 10px;
-  }
-  
-  /* Recuadro parte 2 del sidebar */
-  .Part2{
-    padding-top: 20px ;
-    padding-bottom: 20px;
-    border-width: 1px;
-    border-style: solid;
-    border-top-color: rgb(213, 209, 209) ;
-    border-bottom-color: rgb(213, 209, 209) ;
-    
-  }
-  /* Títulos principales sidebar */
-  h4{
-    margin-left:10px;
-    padding-bottom: 10px ;
-  
-    font-size: 15px;
-    color:white;
-    font-family: sans-serif;
-    text-shadow: 1px 1px 3px black;
-  }
-  
-  /* Configuración ícono sidebar */
-  
-  #IconoSB{
-    padding-right: 12px;
-  }
-  /* no mostrar sidebar si no se le da click al ícono  */
-  #btn-menu{
-    display: none;
-   
-  }
-  
-  /* Ajuste imagenes sidebar de suscripciones */
-  .ImgSB{
-    border-radius: 100%;
-    padding-right: 12px;
-    width: 40px;
-    
-  }
-  
-  /* Finaliza ajuste sidebar */
-  
-  
   
   
 
   .article{
+    margin-top: 2%;
     width: 90%;
     height: auto;
   
