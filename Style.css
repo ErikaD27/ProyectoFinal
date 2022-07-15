@@ -360,7 +360,7 @@ h3{
 
  .footer {
   height: 100px;
-  margin-top: 2%;
+  margin-top: 1.5%;
   grid-area: footer;
   height: 100%;
   background-color: #a89797;
@@ -779,7 +779,7 @@ small{
   }
 
   .container{
-    width: clamp(38%,17vw,50%);
+    width: clamp(32%,15vw,35%);
   }
 
   .sidebar{
@@ -861,10 +861,12 @@ small{
 /*  Para un body mayor de 1200px*/
 @media  (min-width:1200px){
   .Encabezado{
-    width: 100%;
+   
+    height: 40%;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    align-items: center;
+    margin-top: 2%;
+    
   }
   .Contenedor{
     margin-top: 2%;
@@ -875,6 +877,8 @@ small{
     align-items: center;
     
   }
+
+
 
   .SearchMenu{
     max-width: 90%;
@@ -888,11 +892,12 @@ small{
   /* Ajuste de tamaño variable del buscador  */
   .search{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 90%;
     height: clamp(25px, 5vw, 45px);
     padding-left: 2%;
+    margin-top: clamp(0%,14vw,2%);
   }
   
   /* Ajuste variable del ancho del buscador */
@@ -900,6 +905,7 @@ small{
   #search{
     width:60%;
     font-size: clamp(20px,7vw,30px);
+    
     
   }
  
@@ -935,6 +941,7 @@ small{
     min-width: 40%;
     gap:40px;
     margin-right: clamp(2%,100%,4%);
+    margin-top: clamp(0%,14vw,2%);
    
   }
   
@@ -945,10 +952,11 @@ small{
   
   .microfono{
     font-size:clamp(25px, 7vw, 32px); 
+    
   }
   
   .container{
-    width: clamp(6%,14vw,13%);
+    width: clamp(10%,14vw,25%);
   }
 
   .sidebar{
@@ -962,9 +970,15 @@ small{
   h4{
     font-size: clamp(22px,17vw,24px)
   }
+  /* Menu superior */
+  .Contenedor .menu {
+    
+    gap: clamp(2%,14vw,2.5%);
+   
+}
   
   .article{
-    margin-top: 2%;
+    margin-top:0.2%;
     width: 90%;
     height: auto;
     display: grid;
